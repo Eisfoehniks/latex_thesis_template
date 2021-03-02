@@ -1,0 +1,49 @@
+%% Präambel
+%% Initialisierung
+\include{packages.tex}
+
+\begin{document}
+
+%% Titelseite einfügen
+\include{titlepage.tex}
+	
+%% Eidesstattliche Erklärung
+\include{eidesstattliche_erklaerung.tex}
+
+%% Abstract
+\include{abstract.tex}
+
+%% Inhaltsverzeichnis
+\cleardoublepage\pdfbookmark{\contentsname}{toc}\tableofcontents
+\newpage
+
+%% Glossar
+\include{glossar.tex}
+
+%% Abbildungs- und Tabellenverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\noindent
+\listoffigures
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\listoftables
+\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+
+%% Kapitel der Arbeit
+\include{kapitel1.tex}
+
+%% Anhang
+\appendix
+\setcounter {chapter} {0}
+\include{anhang.tex}
+
+
+% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\bibliography{references}
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+%% Anzeige der Quellen
+\nocite{*} % Zeigt alle Quellen an, auch nicht zitierte. Falls nur zitierte Quellen angezeigt werden sollen, diesen Befehl entfernen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+

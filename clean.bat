@@ -1,0 +1,12 @@
+del *.aux
+del *.bbl
+del *.blg
+del *.lof
+del *.log
+del *.lot
+del *.out
+del *.synctex.gz
+del *.toc
+del *.tmb
+del *.bcf
+del *.run.xml

@@ -1,0 +1,83 @@
+%% Pakete laden
+
+%% Format der Arbeit
+\documentclass[enabledeprecatedfontcommands, a4paper, twoside]{scrreprt}    % articel: scrartcl   % book: scrreprt
+% für einseitigen Druck (kein Buchformat) "twoside" entfernen
+% für A5 Format "a5paper" verwenden
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+
+%% Sprache
+\usepackage[ngerman]{babel}
+
+%% Boxstyle
+\usepackage{fancybox}
+
+%% Fußnoten
+\usepackage{endnotes}
+
+% Lesezeichenpacket für PDF
+\usepackage{hyperref}
+
+%% American Mathematical Society Pakete
+\usepackage{amsmath,esint}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amstext}
+\usepackage{mathrsfs}
+\usepackage{bbm}
+\usepackage{cancel}
+\DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
+\usepackage{trfsigns}
+
+%% Grafik Paket
+\usepackage{graphicx}
+\usepackage{float}
+
+%% Optional: Subfigures (mehrere Unterabbildungen in einer figure)
+\usepackage{subfig}
+
+%% Paket zum Einfügen von Quellcode (Sprache kann hier definiert werden)
+\usepackage{listings}
+\lstset{
+	language = C++,
+	showstringspaces = false,
+	numbers = left,
+	breaklines = true,
+}
+
+%% Zeileneinrücken verhindern
+\setlength{\parindent}{0em} 
+
+%% optional: Randlose Kapitelmarker (Daumenregister)
+% Zur Verwendung für neue Kapitel \thumbchapter anstelle von \chapter verwenden
+\usepackage{thumbs}
+\pagenumbering{arabic}
+\newcommand{\thumbchapter}[1]{
+	\chapter{#1}
+	\addthumb{#1}{
+		\space\Huge\sffamily\bfseries \thechapter}{black}{lightgray}
+}
+
+%% optional: Quellenangabe von Bildern direkt unter der Grafik
+% Zur Verwendung für Bildquellen \bildquelle verwenden
+\newcommand*{\bildquelle}[1]{\par\raggedleft\footnotesize Quelle:~#1}
+
+%% optional: Erlaubt Formatierung von Dateipfaden mit \path und URLs mit \url
+\usepackage{url}
+
+%% optional: Breiterer Rand außen
+\usepackage[left=2.5cm, right=5cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+%% optional: Booktabs für schönere Tabellen
+\usepackage{booktabs} % Für schöneres Tabellenaussehen
+
+%% Style
+\pagestyle{fancy}
+\lhead[\bfseries \title \protect]{\bfseries \title \protect}
+
+%% Format der Bibliographie
+\usepackage{natbib}
+\bibliographystyle{alpha} % Harvard Zitierweise (Autorenkürzel für Quellen)
+%\bibliographystyle{abbrv} % Deutsche Zitierweise (Ziffern für Quellen)
