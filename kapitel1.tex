@@ -6,35 +6,6 @@ Das Seitenlayout (Ränder, Daumenregister, Papierformat, ...) ist in \path{packa
 
 Der Abstract wird in \path{abstract.tex} angepasst und der Anhang befindet sich in \path{anhang.tex}.
 
-\begin{align}
-	\text{grad}(L_\pi) &= \frac{\partial L_\pi}{\partial \omega_{ij}} \\
-	\hat{m_t} &= \frac{1}{1-{\beta_1}^t} \left[ \beta_1 m_{t-1} + (1 - \beta_1) \text{grad}(L_\pi) \right] \\
-	\hat{v_t} &= \frac{1}{1-{\beta_2}^t} \left[ \beta_2 v_{t-1} + (1 - \beta_2) (\text{grad}(L_\pi))^2 \right]
-\end{align}
-
-\begin{align}
-	L_\pi &= \frac{1}{N_E} \sum_{E} {L_\pi}_E
-\end{align}
-
-\begin{align}
-	\Delta \omega_{ij} &= - \alpha \frac{\hat{m_t}}{\sqrt{\hat{v_t}} + \epsilon} 
-\end{align}
-
-\begin{align}
-	\beta_1 &= 0,9 \\
-	\beta_2 &= 0,999
-\end{align}
-
-\begin{align}
-	y_i &= \max \left( 0; ~\sum_j \omega_{ij} \cdot x_j \right)
-\end{align}
-
-\begin{align}
-	g_i(\xi, \boldsymbol{\omega}^i, \mathbf{x}^i) &= P \left\{ y_i = \xi | s_i \right\} \\
-	s_i &= \sum_j \omega_{ij} \cdot x_j
-\end{align}
-
-
 \section{Beispiele}
 
 Für Formeln verwendet man \lstinline|\begin{align}|.
